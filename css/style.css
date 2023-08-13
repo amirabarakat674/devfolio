@@ -1,0 +1,407 @@
+:root{
+    --black-color:#1E1E1E;
+    --white-color:#FFFFFF;
+    --blue-color:#0078FE;
+    --gray-color:#F5F5F5;
+    --babyBlue-color:#b9d4f2;
+}
+body{
+font-family: 'Roboto', sans-serif;
+}
+ul{
+    margin-left:0 !important;
+    padding-left: 0 !important;
+}
+li{
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+.bg-black{
+    background-color: var(--black-color) ;
+}
+.bg-white{
+    background-color: var(--white-color);
+}
+.bg-blue{
+    background-color: var(--blue-color);
+}
+.bg-gray{
+    background-color: var(--gray-color);
+}
+.text-black{
+    color: var(--black-color) ;
+}
+.text-white{
+    color: var(--white-color);
+}
+.text-blue{
+    color: var(--blue-color);
+}
+.text-gray{
+    color: var(--gray-color);
+}
+.main-title p{
+    position: relative;
+}
+.main-title p::after{
+    content:" ";
+    position: absolute;
+    bottom: -10px;
+    width: 2%;
+    height: 5px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: var(--blue-color);
+}
+.border-4 {
+    --bs-border-width: 10px;
+
+}
+/* END GLOBAL CODE */
+
+/* -------------------------------- START NAVBAR CODE -------------------------------- */
+.navbar{
+    position:fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+nav .nav-item .nav-link{
+    position: relative;
+
+}
+nav .nav-item .nav-link::after{
+    content:" ";
+    position: absolute;
+    bottom:-3px;
+    left: 0;
+    width:0;
+    height:2px;
+    background-color: var(--white-color);
+    transition: 1s width;
+}
+nav .nav-item .nav-link.active::after{
+    width:95%;
+}
+nav .nav-item .nav-link:hover::after {
+    width:95%;
+}
+.dropdown-menu li a:hover{
+    color:#0078FE;
+    background-color: transparent;
+}
+
+.deep-down{
+    position: absolute;
+    width:200px;
+    left:100%;
+    top:30%;
+    z-index: 2;
+    background-color:#FFFFFF;
+    display:none;
+}
+.deep-icon:hover .deep-down{
+    display:block;
+}
+.deep-icon:hover i ,.deep-icon:hover .dropdown-item{
+    color:#0062d3;
+}
+.deep-icon .deepdown-links a ,.deep-icon i{
+    color:var(--black-color);
+
+}
+.deep-icon .deepdown-links li:hover a{
+    color:#0062d3;
+}
+.navbar-toggler-icon {
+    background-color: #FFFFFF;
+}
+/* -------------------------------- END NAVBAR CODE -------------------------------- */
+
+.icon-up{
+    position: absolute;
+    right: 10px;
+    bottom:10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* -------------------------------- START HOME SECTION CODE -------------------------------- */
+#home{
+    background-image:linear-gradient(rgba(0,0,0,0.6) , rgba(0,0,0,0.5)) , url(../img/hero-bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#home .content-home p::after{
+    content:" ";
+    animation-name:typing;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+
+}
+@keyframes typing {
+    0%{content:"|";}
+    1%{content:"F|";}
+    2%{content:"Fr|";}
+    3%{content:"Fre|";}
+    4%{content:"Free|";}
+    5%{content:"Freel|";}
+    6%{content:"Freela|";}
+    7%{content:"Freelan|";}
+    8%{content:"Freelanc|";}
+    9%{content:"Freelance|";}
+    10%{content:"Freelancer|";}
+    13%{content:"Freelancer|";}
+    14%{content:"Freelance|";}
+    15%{content:"Freelanc|";}
+    16%{content:"Freelan|";}
+    17%{content:"Freela|";}
+    18%{content:"Freel|";}
+    19%{content:"Free|";}
+    20%{content:"Fre|";}
+    21%{content:"Fr|";}
+    22%{content:"F|";}
+    23%{content:"|";}
+    25%{content:"|";}
+    26%{content:"P|";}
+    27%{content:"Ph|";}
+    28%{content:"Pho|";}
+    29%{content:"Phot|";}
+    30%{content:"Photo|";}
+    31%{content:"Photog|";}
+    32%{content:"Photogr|";}
+    33%{content:"Photogra|";}
+    34%{content:"Photograp|";}
+    35%{content:"Photograph|";}
+    36%{content:"Photographe|";}
+    37%{content:"Photographer|";}
+    39%{content:"Photographer|";}
+    40%{content:"Photographe|";}
+    42%{content:"Photograph|";}
+    42%{content:"Photograp|";}
+    43%{content:"Photogra|";}
+    44%{content:"Photogr|";}
+    45%{content:"Photog|";}
+    46%{content:"Photo|";}
+    47%{content:"Phot|";}
+    48%{content:"Pho|";}
+    49%{content:"Ph|";}
+    50%{content:"P|";}
+    51%{content:"|";}
+    53%{content:"|";}
+    54%{content:"D|";}
+    55%{content:"De|";}
+    56%{content:"Dev|";}
+    57%{content:"Deve|";}
+    58%{content:"Devel|";}
+    59%{content:"Develo|";}
+    60%{content:"Develop|";}
+    61%{content:"Develope|";}
+    62%{content:"Developer|";}
+    65%{content:"Developer|";}
+    66%{content:"Develope|";}
+    67%{content:"Develop|";}
+    68%{content:"Develo|";}
+    69%{content:"Devel|";}
+    70%{content:"Deve|";}
+    71%{content:"Dev|";}
+    72%{content:"De|";}
+    73%{content:"D|";}
+    74%{content:"|";}
+    77%{content:"|";}
+    78%{content:"D|";}
+    79%{content:"De|";}
+    80%{content:"Des|";}
+    81%{content:"Desi|";}
+    82%{content:"Desig|";}
+    83%{content:"Design|";}
+    84%{content:"Designe|";}
+    85%{content:"Designer|";}
+    90%{content:"Designer|";}
+    91%{content:"Designe|";}
+    92%{content:"Design|";}
+    93%{content:"Desig|";}
+    94%{content:"Desi|";}
+    95%{content:"Des|";}
+    96%{content:"De|";}
+    97%{content:"D|";}
+    98%{content:"|";}
+    100%{content:"|";}
+}
+/* -------------------------------- END HOME SECTION CODE -------------------------------- */
+
+
+/* -------------------------------- START ABOUT SECTION CODE -------------------------------- */
+#about .progress{
+    background-color: var(--babyBlue-color);
+}
+#about h2{
+    position: relative;
+}
+#about h2::after{
+    content:" ";
+    position: absolute;
+    bottom:-8px;
+    left:0;
+    width:17%;
+    height: 3px;
+    background-color: var(--blue-color);
+    
+    
+}
+/* -------------------------------- END ABOUT SECTION CODE -------------------------------- */
+
+
+/* -------------------------------- START SERVICES SECTION CODE -------------------------------- */
+#services .icon{
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    transition: 1s all;
+}
+.border-5 {
+    --bs-border-width: 10px;
+    --bs-border-color: var(--blue-color);
+}
+#services .data-serv:hover .icon{
+    background-color: var(--blue-color);
+}
+#services .data-serv:hover .border-5{
+    --bs-border-color: var(--babyBlue-color);
+}
+#services .data-serv:hover .icon i{
+    color:var(--white-color);
+}
+#services .feedback{
+    background-image:linear-gradient(rgba(0,120,254,0.7), rgba(0,120,254,0.5)) , url(../img/counters-bg.jpg);
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#services .feedback .icons{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    border: 60px;
+    border-color: #0078FE;
+    transition: 1s all;
+}
+/* -------------------------------- END SERVICES SECTION CODE -------------------------------- */
+
+
+/* -------------------------------- START WORK SECTION CODE -------------------------------- */
+#work .data-work img{
+    transition: 1s all;
+}
+#work .data-work:hover img{
+    transform: scale(1.2,1.2);
+}
+#work .carousel-inner .carousel-item .img-message{
+    width: 150px;
+    height: 150px;
+    
+}
+.carousel-indicators [data-bs-target]{
+    background-clip:border-box;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    border-radius: 50%;
+}
+#work .carsouel-work{
+    background-image:linear-gradient(rgba(0,120,254,0.7), rgba(0,120,254,0.5))  , url(../img/overlay-bg.jpg);
+    background-position:center;
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+/* -------------------------------- END WORK SECTION CODE -------------------------------- */
+
+
+/* -------------------------------- END WORK SECTION CODE -------------------------------- */
+#blog .blog-img span{
+    position: absolute;
+    bottom: -15px;
+
+}
+#blog .links{
+    color:var(--black-color);
+    transition: 1s all;
+}
+#blog .links:hover{
+    color:var(--blue-color);
+}
+/* -------------------------------- END WORK SECTION CODE -------------------------------- */
+
+
+/* -------------------------------- START CONTACT SECTION CODE -------------------------------- */
+#contact{
+    background-image: linear-gradient(rgba(0,120,254,0.7), rgba(0,120,254,0.5))  , url(../img/overlay-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#contact h2{
+    position: relative;
+}
+#contact h2::after{
+    content:" ";
+    position: absolute;
+    bottom:-8px;
+    left:0;
+    width:17%;
+    height: 3px;
+    background-color: var(--blue-color);
+}
+#contact .icon-contact div{
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+    text-align: center;
+    border: 4px solid;
+    border-color: var(--blue-color);
+    border-radius: 50%;
+    background-color: var(--white-color);
+    transition: 1s all;
+}
+#contact .icon i{
+    color: var(--black-color);
+}
+#contact .icon:hover{
+    background-color: var(--blue-color);
+    border-color: var(--babyBlue-color);
+}
+#contact .icon:hover i{
+    color:var(--white-color);
+}
+#contact .form button{
+    border: 4px solid;
+    border-color: transparent;
+    transition: 1s all;
+    background-color: var(--blue-color);
+}
+#contact .form button:hover{
+    border-color: var(--babyBlue-color);
+    background-color:#4396f6;
+}
+/* -------------------------------- END CONTACT SECTION CODE -------------------------------- */
+
+#footer{
+    background-color:#0062d3;
+    box-shadow:  inset 0 0.5px  7px 1px rgba(0, 0, 0, 0.267);
+}
